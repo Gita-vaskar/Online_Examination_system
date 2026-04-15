@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+<head>
+<style>
+  .jumbotron {
+    margin-bottom: 0px;
+    /* Image ko background mein lagane ke liye niche wali line */
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("{% static 'image/nmiet.jpg' %}");
+    background-size: cover;       /* Image poori screen cover karegi */
+    background-position: center;   /* Image beech mein rahegi */
+    background-repeat: no-repeat;
+    height: 100vh;                /* Full screen height */
+    color: white;                 /* Text ka color white takki image pe dikhe */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+</head>
+
+<body>
+  {% include "exam/navbar.html" %}
+
+<section id="section-jumbotron" class="jumbotron jumbotron-fluid">
+  <div class="container text-center">
+    <h2 class="display-3 text-info" style="color: #17a2b8 !important;">Online Examination System</h2>
+    <p class="display-4 d-none d-sm-block">Attend your examinations online!</p>
+    <p class="lead">Sign Up now to start your first online examination</p>
+
+    <p><strong> Start Your Journey Here:</strong></p>
+    <a href="/student/studentsignup" class="btn btn-lg btn-info" style="padding-right: 35px; border-radius: 0%;">
+        <i class="fa fa-graduation-cap" aria-hidden="true"></i> Sign Up as Student
+    </a>
+  </div>  
+</section>
+
+  {% include "exam/footer.html" %}
+</body>
+</html>
